@@ -11,7 +11,6 @@ use serde_json;
 mod cmd_ln; //command line portion of the app
 mod db_drive; //thread that communicates with the linked database
 mod dt_manip; //thread that does backend calculations and data verification
-mod editor; //thread for manually editing and scanning in data
 mod gui_vis; //thread for viewing data visually
 mod handeling;
 
@@ -29,20 +28,27 @@ fn main() {
         // These transmitted from the main thread
     let (db_drive_tx, db_drive_rx) = mpsc::channel();
     let (dt_manip_tx, dt_manip_rx) = mpsc::channel();
-    let (editor_tx, editor_rx) = mpsc::channel();
     let (gui_vis_tx, gui_vis_rx) = mpsc::channel();
         // These are recieved on the main thread
     let (cmd_ln_c, rx) = mpsc::channel();
     let db_drive_c = cmd_ln_c.clone();
     let dt_manip_c = cmd_ln_c.clone();
-    let editor_c = cmd_ln_c.clone();
     let gui_vis_c = cmd_ln_c.clone();
 
     // load in the threads now //Note that rn main is a placeholder
-    let cmd_ln_thread = thread::spawn(move || cmd_ln::main());
+    let cmd_ln_thread = thread::spawn(move || {
+        let mode: cmd_ln::Mode = cmd_ln::Mode::Admin;
+        loop {
+            let mut input = String::new();
+            io::stdin().read_line(&mut input).expect("Failed to read line");
+            x = run_command(&input, mode);
+        }
+    });
+
     let db_drive_thread = thread::spawn(move || db_drive::main());
+
     let dt_manip_thread = thread::spawn(move || dt_manip::main());
-    let editor_thread = thread::spawn(move || editor::main());
+
     let gui_vis_thread = thread::spawn(move || gui_vis::main());
 
     // load in the event loop
