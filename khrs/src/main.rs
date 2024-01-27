@@ -5,6 +5,8 @@ use std::fs::File;
 use std::path::Path;
 use std::thread;
 use std::sync::mpsc;
+use serde;
+use serde_json;
 
 mod cmd_ln; //command line portion of the app
 mod db_drive; //thread that communicates with the linked database
