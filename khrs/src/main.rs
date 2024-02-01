@@ -5,6 +5,7 @@ use std::fs::File;
 use std::path::Path;
 use std::thread;
 use std::sync::mpsc;
+use std::time;
 use serde;
 use serde_json;
 
@@ -13,6 +14,7 @@ mod db_drive; //thread that communicates with the linked database
 mod dt_manip; //thread that does backend calculations and data verification
 mod gui_vis; //thread for viewing data visually
 mod handeling;
+mod messages;
 
 fn main() {
     // Bootup and Loading 
@@ -37,29 +39,67 @@ fn main() {
 
     // load in the threads now //Note that rn main is a placeholder
     let cmd_ln_thread = thread::spawn(move || {
-        let mode: cmd_ln::Mode = cmd_ln::Mode::Admin;
+        let mut mode = cmd_ln::Mode::View;
         loop {
-            let mut input = String::new();
-            io::stdin().read_line(&mut input).expect("Failed to read line");
-            x = run_command(&input, mode);
+            let (cmd_ln_state, cmd_ln_out) = 
+                cmd_ln::io_message_2(cmd_ln::io_message_1("Input Available"))
+                .find_handle(Box::new(|cmd| cmd_ln::cmd_ln_map(cmd)))
+                .run(&mode);
+
+            if let Some(state) = cmd_ln_state {
+                mode = state;
+            }
+
+            while let Err(_) = cmd_ln_c.send(cmd_ln_out) {
+                println!("cmd_ln had error sending");
+                thread::sleep(time::Duration::from_secs(5));
+            }
         }
     });
 
-    let db_drive_thread = thread::spawn(move || db_drive::main());
+//    let db_drive_thread = thread::spawn(move || db_drive::main());
 
-    let dt_manip_thread = thread::spawn(move || dt_manip::main());
+//    let dt_manip_thread = thread::spawn(move || dt_manip::main());
 
-    let gui_vis_thread = thread::spawn(move || gui_vis::main());
+//    let gui_vis_thread = thread::spawn(move || gui_vis::main());
 
+    let mut target = handeling::Destination::None;
     // load in the event loop
-    loop {
-        //check each reciever for a message
-        //do logic stuff
-        //pass on to appropriate channel
+    for recieved in rx {
+        let (main_state, main_out) = recieved
+            .find_handle(Box::new(|cmd| handler(cmd)))
+            .run(&target);
+
+        if let Some(state) = main_state {
+            target = state;
+        }
+
+        match target {
+            handeling::Destination::None => (),
+
+            handeling::Destination::DbDrive => while let Err(_) = db_drive_tx.send(main_out) {
+                println!("cmd_ln had error sending");
+                thread::sleep(time::Duration::from_secs(5));
+            },
+
+            handeling::Destination::DtManip => while let Err(_) = dt_manip_tx.send(main_out) {
+                println!("cmd_ln had error sending");
+                thread::sleep(time::Duration::from_secs(5));
+            },
+
+            handeling::Destination::GuiVis => while let Err(_) = gui_vis_tx.send(main_out) {
+                println!("cmd_ln had error sending");
+                thread::sleep(time::Duration::from_secs(5));
+            },
+        }
     }
 
 }
 
+fn handler(cmd: &str) -> messages::Command<handeling::Destination> {
+    //placeholder
+    Box::new(|_val, _env| (Option::None, messages::Message::None))
+}
 
 /*
     PARAMETERS:
