@@ -12,10 +12,10 @@ pub enum Mode {
     View,
 }
 
-type CmdLnOutput<'a> = messages::Output<'a, Mode>;
+type CmdLnOutput = messages::Output<Mode>;
 
-pub fn cmd_ln_map(command: &'static str) -> messages::Command<Mode> {
-    let command_pointer = match command {
+pub fn cmd_ln_map(command: String) -> messages::Command<Mode> {
+    let command_pointer = match command.trim() {
         "switch_mode" => |target_mode, _no_args| switch_mode(target_mode, _no_args),
         "view_mode" => |_no_args, current_mode| view_mode(current_mode),
         "scan" => |_no_args, current_mode| scan(current_mode),
@@ -99,36 +99,13 @@ fn save_data(current_mode: &Mode) -> CmdLnOutput {
     (None, messages::Message::None)
 }
 
-pub fn simple_io(p: &str) -> Result<String,std::io::Error> {
+pub fn simple_io(p: &str) -> (String, String) {
     println!("{}", p);            //ask what to do
     let mut input = String::new();
     if let Result::Err(err) = io::stdin().read_line(&mut input) {
-        Result::Err(err)
+        (String::new(), String::new())
     } else {
-        Ok(input)
-    }
-}
-
-pub fn io_message_1(p: &str) -> Option<(borrow::Cow<'_, str>, borrow::Cow<'_, str>)> {
-    match simple_io(p) {
-        Err(_) => None,
-        Ok(input) => {
-            let (cmd, args) = split_input_command(input);
-            Some((borrow::Cow::from(cmd.trim()), borrow::Cow::from(args.trim())))
-        },
-    }
-}
-
-pub fn io_message_2<'a>(inp: Option<(borrow::Cow<'_, str>, borrow::Cow<'_, str>)>) -> messages::Message<'a> {
-    match inp {
-        None => messages::Message::None,
-        Some((a, b)) => messages::Message::Command(
-            &a,
-            match serde_json::from_str(&b) {
-                Err(_) => serde_json::Value::Null,
-                Ok(x) => x,
-            },
-        )
+        split_input_command(input)
     }
 }
 

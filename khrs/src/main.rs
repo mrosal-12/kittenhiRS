@@ -15,6 +15,7 @@ mod dt_manip; //thread that does backend calculations and data verification
 mod gui_vis; //thread for viewing data visually
 mod handeling;
 mod messages;
+mod bootup_and_closing;
 
 fn main() {
     // Bootup and Loading 
@@ -22,7 +23,7 @@ fn main() {
 
     // Load file path with the two arguments
     let file_path: String = 
-        if args.len() == 2 {bootup(args.get(0), args.get(1)).unwrap()}
+        if args.len() == 2 {bootup_and_closing::bootup(args.get(0), args.get(1)).unwrap()}
         else {panic!("Must load program with 2 arguments via the command line")};
 
     // load the threads
@@ -38,18 +39,22 @@ fn main() {
     let gui_vis_c = cmd_ln_c.clone();
 
     // load in the threads now //Note that rn main is a placeholder
-    let cmd_ln_thread = thread::spawn(move || {
-        let mut mode = cmd_ln::Mode::View;
-        loop {
-            let (cmd_ln_state, cmd_ln_out) = 
-                cmd_ln::io_message_2(cmd_ln::io_message_1("Input Available"))
-                .find_handle(Box::new(|cmd| cmd_ln::cmd_ln_map(cmd)))
-                .run(&mode);
+    let cmd_ln_thread = thread::spawn(move || {     //spawn cmd_ln
+        let mut mode = cmd_ln::Mode::View;       //cmd_lns behavior changes as mode changes, couldn't find a way to do this immutably w/out recursion
+        loop {                                  //cmd_ln event loop
+            let (cmd_ln_state, cmd_ln_out) = {          //these are what the handeler outputs
+                let (cmd_in1, cmd_in2) = cmd_ln::simple_io("Input Available");
+                messages::Message::from(cmd_in1.trim(), cmd_in2.trim())
+                    .find_handle(Box::new(|cmd| cmd_ln::cmd_ln_map(cmd)))
+                    .run(&mode)
+            };
 
+            //change mode if it wants too
             if let Some(state) = cmd_ln_state {
                 mode = state;
             }
 
+            //keep trying to send to main
             while let Err(_) = cmd_ln_c.send(cmd_ln_out) {
                 println!("cmd_ln had error sending");
                 thread::sleep(time::Duration::from_secs(5));
@@ -57,23 +62,69 @@ fn main() {
         }
     });
 
-//    let db_drive_thread = thread::spawn(move || db_drive::main());
+    let db_drive_thread = thread::spawn(move || {
+        for recieved in db_drive_rx {
+            let (_, db_drive_out) = {
+                recieved
+                    .find_handle(Box::new(|cmd| db_drive::db_drive_map(cmd)))
+                    .run(&file_path)
+            };
 
-//    let dt_manip_thread = thread::spawn(move || dt_manip::main());
+            while let Err(_) = db_drive_c.send(db_drive_out) {
+                println!("db_drive had error sending");
+                thread::sleep(time::Duration::from_secs(5));
+            }
+        }
+    });
 
-//    let gui_vis_thread = thread::spawn(move || gui_vis::main());
+    let dt_manip_thread = thread::spawn(move || {
+        let _dtm_env = Option::None;
+        for recieved in dt_manip_rx {
+            let (_, dt_manip_out) = {
+                recieved
+                    .find_handle(Box::new(|cmd| dt_manip::dt_manip_map(cmd)))
+                    .run(&_dtm_env)
+            };
 
-    let mut target = handeling::Destination::None;
+            while let Err(_) = dt_manip_c.send(dt_manip_out) {
+                println!("dt_manip had error sending");
+                thread::sleep(time::Duration::from_secs(5));
+            }
+        }
+    });
+
+    /* 
+    let gui_vis_thread = thread::spawn(move || {
+        let _gv_env = Option::None;
+        for recieved in gui_vis_rx {
+            let (_, gui_vis_out) = {
+                recieved
+                    .find_handle(Box::new(|cmd| gui_vis::gui_vis_map(cmd)))
+                    .run(&_gv_env)
+            };
+
+            while let Err(_) = gui_vis_c.send(gui_vis_out) {
+                println!("gui_vis had error sending");
+                thread::sleep(time::Duration::from_secs(5));
+            }
+        }
+    }); */
+
+    let mut target = handeling::Destination::None; //tells the target for message sending
     // load in the event loop
     for recieved in rx {
-        let (main_state, main_out) = recieved
-            .find_handle(Box::new(|cmd| handler(cmd)))
-            .run(&target);
+        let (main_state, main_out) = {              //get output
+            recieved
+                .find_handle(Box::new(|_cmd| handeling::handler()))
+                .run(&target)
+        };
 
+        //change target if nec.
         if let Some(state) = main_state {
             target = state;
         }
 
+        //keep sending message to target
         match target {
             handeling::Destination::None => (),
 
@@ -94,98 +145,4 @@ fn main() {
         }
     }
 
-}
-
-fn handler(cmd: &str) -> messages::Command<handeling::Destination> {
-    //placeholder
-    Box::new(|_val, _env| (Option::None, messages::Message::None))
-}
-
-/*
-    PARAMETERS:
-    cmd: &str | a string slice representing the bootup command (either "load" or "new")
-    file: &str | a strign slice representing the name of the linked storage file
-
-    returns a string slice representing the relative file path of the linked storage file
-*/
-fn bootup(command: Option<&String>, filename: Option<&String>) -> Option<String> {
-    let cmd = command?.trim();      //convert to slice
-    let file = filename?.trim();
-    let temp = ["./storage/", file, ".json"].concat();
-    let fp: &str = temp.trim();    //create a file path
-    let exists = Path::new(fp).try_exists();        //will check for error later
-
-    match cmd {
-        "new" => {      //for the "new" command
-            {           //confirmation
-            println!("Are you sure wish to create {}? Type Y to confirm", file);
-            let mut input = String::new();
-            io::stdin().read_line(&mut input).expect("Failed to read line");
-            if input.trim() != "Y" {panic!("Failed to load file")};
-            }
-
-            match exists {
-                Ok(x) if x => {       //if the file path exists
-                    println!("{} already exists. Load (L) or Overwrite (D)?", file);            //ask what to do
-                    let mut input = String::new();
-                    io::stdin().read_line(&mut input).expect("Failed to read line");
-                    while input.trim() != "L" && input.trim() != "D" {      //if the user doesn't put in L or D
-                        println!("Load(L) or Overwrite (D)?");
-                        io::stdin().read_line(&mut input).expect("Failed to read line");
-                    }
-                    
-                    match input.trim() {
-                        "L" => bootup(Some(&String::from("load")), Some(&String::from(file))),        //Load instead of new
-                        "D" => {
-                            println!("Type DELETE to confirm overwriting of {}", file); //please make sure this isn't a mistake
-                            io::stdin().read_line(&mut input).expect("Failed to read line");
-                            match input.trim() {        
-                                "DELETE" => {           //Okay, if you say so
-                                    match fs::remove_file(fp) {
-                                        Ok(_x) => bootup(Some(&String::from("new")), Some(&String::from(file))),     //now make a new file
-                                        Err(_x) => panic!("Cannot remove a file"),      //throw an error if you cant
-                                    }
-                                },
-                                _ => panic!("Failed to load file"),     //ok if you don't wanna lets just crash the program and start over
-                            }
-                        },
-                        _ => panic!("unexplainable error"),
-                    }
-                },
-
-                Ok(x) if !x => {      //if it doesn't exist create it and return the file path
-                    match File::create(fp) {
-                        Ok(_x) => {println!("{} created", fp); Some(String::from(fp))},
-                        Err(_x) => panic!("Failed to create file"),             //throw an error if you can't
-                    }
-                },
-
-                _ => panic!("unexplainable error"),     //throw an error if otherwise
-            }
-        },
-
-        "load" => {     //load target file
-            match exists {
-                Ok(x) if x => {       //if it exists, return file path
-                    println!("Successfully Loaded {}", file);
-                    Some(String::from(fp))
-                },
-
-                Ok(x) if !x => {      //if it doesn't exist, ask if they wanted to create a new one
-                    {
-                    println!("couldn't find {}. Create new file (Y to confirm)?", file);
-                    let mut input = String::new();
-                    io::stdin().read_line(&mut input).expect("Failed to read line");
-                    if input.trim() != "Y" {panic!("Failed to load file")};
-                    }
-
-                    bootup(Some(&String::from("new")), Some(&String::from(file)))     //create a new one
-                },
-
-                _ => panic!("unexplainable error"),     //throw an error if otherwise
-            }
-        },
-
-        _ => panic!("Command has to be load or new. Remeber that case matters!"),       //not the correct command lol
-    }
 }
