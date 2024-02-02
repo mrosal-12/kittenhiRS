@@ -6,6 +6,7 @@ use std::path::Path;
 use std::thread;
 use std::sync::mpsc;
 use std::time;
+use messages::Message;
 use serde;
 use serde_json;
 
@@ -29,11 +30,11 @@ fn main() {
     // load the threads
     //do the channels first
         // These transmitted from the main thread
-    let (db_drive_tx, db_drive_rx) = mpsc::channel();
-    let (dt_manip_tx, dt_manip_rx) = mpsc::channel();
-    let (gui_vis_tx, gui_vis_rx) = mpsc::channel();
+    let (db_drive_tx, db_drive_rx) = mpsc::channel::<messages::Message>();
+    let (dt_manip_tx, dt_manip_rx) = mpsc::channel::<messages::Message>();
+    let (gui_vis_tx, gui_vis_rx) = mpsc::channel::<messages::Message>();
         // These are recieved on the main thread
-    let (cmd_ln_c, rx) = mpsc::channel();
+    let (cmd_ln_c, rx) = mpsc::channel::<messages::Message>();
     let db_drive_c = cmd_ln_c.clone();
     let dt_manip_c = cmd_ln_c.clone();
     let gui_vis_c = cmd_ln_c.clone();
@@ -55,7 +56,7 @@ fn main() {
             }
 
             //keep trying to send to main
-            while let Err(_) = cmd_ln_c.send(cmd_ln_out) {
+            while let Err(_) = cmd_ln_c.send(cmd_ln_out.clone()) {
                 println!("cmd_ln had error sending");
                 thread::sleep(time::Duration::from_secs(5));
             }
@@ -70,7 +71,7 @@ fn main() {
                     .run(&file_path)
             };
 
-            while let Err(_) = db_drive_c.send(db_drive_out) {
+            while let Err(_) = db_drive_c.send(db_drive_out.clone()) {
                 println!("db_drive had error sending");
                 thread::sleep(time::Duration::from_secs(5));
             }
@@ -86,7 +87,7 @@ fn main() {
                     .run(&_dtm_env)
             };
 
-            while let Err(_) = dt_manip_c.send(dt_manip_out) {
+            while let Err(_) = dt_manip_c.send(dt_manip_out.clone()) {
                 println!("dt_manip had error sending");
                 thread::sleep(time::Duration::from_secs(5));
             }
@@ -128,17 +129,17 @@ fn main() {
         match target {
             handeling::Destination::None => (),
 
-            handeling::Destination::DbDrive => while let Err(_) = db_drive_tx.send(main_out) {
+            handeling::Destination::DbDrive => while let Err(_) = db_drive_tx.send(main_out.clone()) {
                 println!("cmd_ln had error sending");
                 thread::sleep(time::Duration::from_secs(5));
             },
 
-            handeling::Destination::DtManip => while let Err(_) = dt_manip_tx.send(main_out) {
+            handeling::Destination::DtManip => while let Err(_) = dt_manip_tx.send(main_out.clone()) {
                 println!("cmd_ln had error sending");
                 thread::sleep(time::Duration::from_secs(5));
             },
 
-            handeling::Destination::GuiVis => while let Err(_) = gui_vis_tx.send(main_out) {
+            handeling::Destination::GuiVis => while let Err(_) = gui_vis_tx.send(main_out.clone()) {
                 println!("cmd_ln had error sending");
                 thread::sleep(time::Duration::from_secs(5));
             },

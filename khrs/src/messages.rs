@@ -4,6 +4,7 @@ pub type Output<T> = (Option<T>, Message);          //This is what the handler o
 pub type Command<T> = Box<dyn Fn(serde_json::Value, &T) -> Output<T>>;      //This what creates output
 
 //Message enum (if there is a message, what does it say)
+#[derive(Clone)]
 pub enum Message {
     None,
     Command(String, serde_json::Value),
@@ -17,7 +18,7 @@ pub struct Handle<T> {
 
 impl Message {
     //try to find the handle based on the module's available functions
-    pub fn find_handle<T>(self, mapping: Box<dyn Fn(&str) -> Command<T>>) -> Handle<T> {
+    pub fn find_handle<T>(self, mapping: Box<dyn Fn(String) -> Command<T>>) -> Handle<T> {
         match self {
             Message::Command(cmd, args) => Handle::<T> {
                 cmd: mapping(cmd),
@@ -33,10 +34,9 @@ impl Message {
     pub fn from(cmd: &str, args: &str) -> Message {
         if cmd == "" {Message::None}    //if no cmd, no message
         else {
-            Message::Command(
-                String::from(cmd),
-                serde_json::from_str(args),
-            )
+            if let Ok(val) = serde_json::from_str(args) {
+                Message::Command(String::from(cmd), val)
+            } else {Message::None}
         }
     }
 }

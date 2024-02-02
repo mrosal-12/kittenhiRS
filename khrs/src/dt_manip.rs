@@ -1,14 +1,14 @@
 use serde;
 use serde_json;
-use crates::messages;
+use crate::messages;
 
 type Stateless = messages::Output<Option<bool>>;
 
 pub fn dt_manip_map(cmd: String) -> messages::Command<Option<bool>> {
     let command_pointer = match cmd.trim() {
-        "calc" => |args, _stateless| calc(args),
-        "verif" => |args, _stateless| verif(args),
-        _ => |_no_args, _like_its_empty| (None, messages::Message::None),
+        "calc" => |args: serde_json::Value, _stateless: &Option<bool>| calc(args),
+        "verif" => |args: serde_json::Value, _stateless: &Option<bool>| verif(args),
+        _ => |_no_args: serde_json::Value, _like_its_empty: &Option<bool>| (None, messages::Message::None),
     };
     Box::new(command_pointer)
 }
