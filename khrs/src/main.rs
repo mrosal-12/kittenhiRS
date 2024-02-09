@@ -6,9 +6,9 @@ use std::path::Path;
 use std::thread;
 use std::sync::mpsc;
 use std::time;
-use messages::Message;
 use serde;
 use serde_json;
+use egui;
 
 mod cmd_ln; //command line portion of the app
 mod db_drive; //thread that communicates with the linked database
@@ -94,14 +94,13 @@ fn main() {
         }
     });
 
-    /* 
     let gui_vis_thread = thread::spawn(move || {
-        let _gv_env = Option::None;
+        let mut ctx = egui::Context::default();
         for recieved in gui_vis_rx {
             let (_, gui_vis_out) = {
                 recieved
                     .find_handle(Box::new(|cmd| gui_vis::gui_vis_map(cmd)))
-                    .run(&_gv_env)
+                    .run(&ctx)
             };
 
             while let Err(_) = gui_vis_c.send(gui_vis_out) {
@@ -109,14 +108,14 @@ fn main() {
                 thread::sleep(time::Duration::from_secs(5));
             }
         }
-    }); */
+    }); 
 
     let mut target = handeling::Destination::None; //tells the target for message sending
     // load in the event loop
     for recieved in rx {
         let (main_state, main_out) = {              //get output
             recieved
-                .find_handle(Box::new(|_cmd| handeling::handler()))
+                .find_handle(Box::new(|cmd| handeling::handler(cmd)))
                 .run(&target)
         };
 

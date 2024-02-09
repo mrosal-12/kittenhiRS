@@ -16,13 +16,14 @@ pub fn cmd_ln_map(command: String) -> messages::Command<Mode> {
     let command_pointer = match command.trim() {
         "switch_mode" => |target_mode: serde_json::Value, _no_args: &Mode| switch_mode(target_mode),
         "view_mode" => |_no_args: serde_json::Value, current_mode: &Mode| view_mode(current_mode),
+        "cmd_list" => |_no_args: serde_json::Value, _like_its_empty: &Mode| cmd_list(),
+        "cur_cmd_list" => |_no_args: serde_json::Value, current_mode: &Mode| cur_cmd_list(current_mode),
         "scan" => |_no_args: serde_json::Value, current_mode: &Mode| scan(current_mode),
         "edit_entry" => |args: serde_json::Value, current_mode: &Mode| edit_entry(args, current_mode),
         "add_entry" => |args: serde_json::Value, current_mode: &Mode| add_entry(args, current_mode),
         "remove_entry" => |args: serde_json::Value, current_mode: &Mode| remove_entry(args, current_mode),
         "change_validity" => |args: serde_json::Value, current_mode: &Mode| change_validity(args, current_mode),
         "view_warnings" => |_no_args: serde_json::Value, current_mode: &Mode| view_warnings(current_mode),
-        "view_state" => |_no_args: serde_json::Value, current_mode: &Mode| view_state(current_mode),
         "close_khrs" => |_no_args: serde_json::Value, current_mode: &Mode| close_khrs(current_mode),
         "save_data" => |_no_args: serde_json::Value, current_mode: &Mode| save_data(current_mode),
         _ => |_no_args: serde_json::Value, _like_its_empty: &Mode| (None, messages::Message::None),
@@ -52,49 +53,121 @@ fn view_mode(current_mode: &Mode) -> CmdLnOutput {
     (None, messages::Message::None)
 }
 
-fn scan(current_mode: &Mode) -> CmdLnOutput {
-    // placeholder
+fn cmd_list() -> CmdLnOutput {
+    println!("placeholder");
     (None, messages::Message::None)
+}
+
+fn cur_cmd_list(mode: &Mode) -> CmdLnOutput {
+    //placeholder
+    println!("{}", match current_mode {
+        Mode::Admin => "Admin",
+        Mode::Editor => "Editor",
+        Mode::View => "Viewer",
+    });
+    (None, messages::Message::None)
+}
+
+fn scan(current_mode: &Mode) -> CmdLnOutput {
+    if let Mode::Editor = current_mode {
+        //placeholder until scan
+        (None, messages::Message::None)
+    } else {
+        println!("Can only scan in Editor Mode");
+        (None, messages::Message::None)
+    }
 }
 
 fn edit_entry(args: serde_json::Value, current_mode: &Mode) -> CmdLnOutput {
-    // placeholder
-    (None, messages::Message::None)
+    if let Mode::Editor = current_mode {
+        (None, messages::Message::Command(
+            "db_drive",
+            serde_json::Value::Array(vec![
+                serde_json::Value::String("change".to_string()),
+                args
+            ])
+        ))
+    } else {
+        println!("Can only edit in Editor Mode");
+        (None, messages::Message::None)
+    }
 }
 
 fn add_entry(args: serde_json::Value, current_mode: &Mode) -> CmdLnOutput {
-    // placeholder
-    (None, messages::Message::None)
+    if let Mode::Editor = current_mode {
+        (None, messages::Message::Command(
+            "db_drive",
+            serde_json::Value::Array(vec![
+                serde_json::Value::String("enter".to_string()),
+                args
+            ])
+        ))
+    } else {
+        println!("Can only add in Editor Mode");
+        (None, messages::Message::None)
+    }
 }
 
 fn remove_entry(args: serde_json::Value, current_mode: &Mode) -> CmdLnOutput {
-    // placeholder
-    (None, messages::Message::None)
+    if let Mode::Editor = current_mode {
+        (None, messages::Message::Command(
+            "db_drive",
+            serde_json::Value::Array(vec![
+                serde_json::Value::String("remove".to_string()),
+                args
+            ])
+        ))
+    } else {
+        println!("Can only remove in Editor Mode");
+        (None, messages::Message::None)
+    }
 }
 
 fn change_validity(args: serde_json::Value, current_mode:&Mode) -> CmdLnOutput {
-    // placeholder
-    (None, messages::Message::None)
+    if let Mode::Editor = current_mode {
+        (None, messages::Message::Command(
+            "db_drive",
+            serde_json::Value::Array(vec![
+                serde_json::Value::String("change_validity".to_string()),
+                args
+            ])
+        ))
+    } else {
+        println!("Can only change validity in Editor Mode");
+        (None, messages::Message::None)
+    }
 }
 
 fn view_warnings(current_mode: &Mode) -> CmdLnOutput {
-    // placeholder
-    (None, messages::Message::None)
-}
-
-fn view_state(current_mode: &Mode) -> CmdLnOutput {
-    // placeholder
-    (None, messages::Message::None)
+    if let Mode::Editor = current_mode {
+        (None, messages::Message::Command(
+            "db_drive".to_string(),
+            serde_json::json!(["check_validity", null])
+        ))
+    } else {
+        println!("Can only view warnings in View Mode");
+        (None, messages::Message::None)
+    }
 }
 
 fn close_khrs(current_mode: &Mode) -> CmdLnOutput {
-    // placeholder
-    (None, messages::Message::None)
+    if let Mode::Editor = current_mode {
+        //placeholder until scan
+        (None, messages::Message::None)
+    } else {
+        println!("Can only close in Admin Mode");
+        (None, messages::Message::None)
+    }
 }
 
 fn save_data(current_mode: &Mode) -> CmdLnOutput {
-    // placeholder
-    (None, messages::Message::None)
+    if let Mode::Editor = current_mode {
+        //placeholder until scan
+        (None, messages::Message::None)
+    } else {
+        println!("Can only save in Admin Mode");
+        (None, messages::Message::None)
+    }
 }
 
 pub fn simple_io(p: &str) -> (String, String) {

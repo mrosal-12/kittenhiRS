@@ -8,26 +8,23 @@ pub enum Destination {
     GuiVis,
 }
 
-pub fn handler() -> messages::Command<Destination> {
+pub fn handler(cmd: String) -> messages::Command<Destination> {
     Box::new(|args, _env| {
         (
-            match &args[0] {
-                serde_json::Value::String(tar) => match tar.trim() {
-                    "db_drive" => Some(Destination::DbDrive),
-                    "dt_manip" => Some(Destination::DtManip),
-                    "gui_vis" => Some(Destination::GuiVis),
-                    _ => Some(Destination::None),
-                },
+            match cmd.trim() {
+                "db_drive" => Some(Destination::DbDrive),
+                "dt_manip" => Some(Destination::DbDrive),
+                "gui_vis" => Some(Destination::DbDrive),
                 _ => Some(Destination::None),
             },
 
             messages::Message::Command(
-                match &args[1] {
+                match &args[0] {
                     serde_json::Value::String(cmd) => cmd.to_string(),
                     _ => "".to_string(),
                 },
 
-                match &args[2] {
+                match &args[1] {
                     serde_json::Value::Bool(b) => serde_json::Value::Bool(*b),
                     serde_json::Value::Number(b) => serde_json::Value::Number(b.clone()),
                     serde_json::Value::String(b) => serde_json::Value::String(b.clone()),
