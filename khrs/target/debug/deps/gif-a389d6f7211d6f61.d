@@ -1,0 +1,12 @@
+C:\Users\mgros\kittenhiss\kittenhiRS\khrs\target\debug\deps\libgif-a389d6f7211d6f61.rmeta: C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gif-0.13.1\src\lib.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gif-0.13.1\src\traits.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gif-0.13.1\src\common.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gif-0.13.1\src\reader\mod.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gif-0.13.1\src\reader\decoder.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gif-0.13.1\src\reader\converter.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gif-0.13.1\src\encoder.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gif-0.13.1\src\../README.md
+
+C:\Users\mgros\kittenhiss\kittenhiRS\khrs\target\debug\deps\gif-a389d6f7211d6f61.d: C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gif-0.13.1\src\lib.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gif-0.13.1\src\traits.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gif-0.13.1\src\common.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gif-0.13.1\src\reader\mod.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gif-0.13.1\src\reader\decoder.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gif-0.13.1\src\reader\converter.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gif-0.13.1\src\encoder.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gif-0.13.1\src\../README.md
+
+C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gif-0.13.1\src\lib.rs:
+C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gif-0.13.1\src\traits.rs:
+C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gif-0.13.1\src\common.rs:
+C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gif-0.13.1\src\reader\mod.rs:
+C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gif-0.13.1\src\reader\decoder.rs:
+C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gif-0.13.1\src\reader\converter.rs:
+C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gif-0.13.1\src\encoder.rs:
+C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\gif-0.13.1\src\../README.md:

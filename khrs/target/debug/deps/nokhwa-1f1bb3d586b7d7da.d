@@ -1,0 +1,11 @@
+C:\Users\mgros\kittenhiss\kittenhiRS\khrs\target\debug\deps\libnokhwa-1f1bb3d586b7d7da.rmeta: C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-0.10.4\src\lib.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-0.10.4\src\backends\mod.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-0.10.4\src\backends\capture\mod.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-0.10.4\src\backends\capture\msmf_backend.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-0.10.4\src\camera.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-0.10.4\src\init.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-0.10.4\src\query.rs
+
+C:\Users\mgros\kittenhiss\kittenhiRS\khrs\target\debug\deps\nokhwa-1f1bb3d586b7d7da.d: C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-0.10.4\src\lib.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-0.10.4\src\backends\mod.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-0.10.4\src\backends\capture\mod.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-0.10.4\src\backends\capture\msmf_backend.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-0.10.4\src\camera.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-0.10.4\src\init.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-0.10.4\src\query.rs
+
+C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-0.10.4\src\lib.rs:
+C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-0.10.4\src\backends\mod.rs:
+C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-0.10.4\src\backends\capture\mod.rs:
+C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-0.10.4\src\backends\capture\msmf_backend.rs:
+C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-0.10.4\src\camera.rs:
+C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-0.10.4\src\init.rs:
+C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-0.10.4\src\query.rs:

@@ -1,0 +1,210 @@
+cargo:include=C:\Users\mgros\kittenhiss\kittenhiRS\khrs\target\debug\build\mozjpeg-sys-97684a73bdc6b6d7\out\include;C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\mozjpeg-sys-1.1.1\vendor
+cargo:lib_version=62
+cargo:warning=NASM not installed. Mozjpeg's SIMD won't be enabled: program not found
+TARGET = Some("x86_64-pc-windows-msvc")
+OPT_LEVEL = Some("0")
+HOST = Some("x86_64-pc-windows-msvc")
+cargo:rerun-if-env-changed=CC_x86_64-pc-windows-msvc
+CC_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=CC_x86_64_pc_windows_msvc
+CC_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_CC
+HOST_CC = None
+cargo:rerun-if-env-changed=CC
+CC = None
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+CARGO_CFG_TARGET_FEATURE = Some("fxsr,sse,sse2")
+DEBUG = Some("true")
+cargo:rerun-if-env-changed=CFLAGS_x86_64-pc-windows-msvc
+CFLAGS_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=CFLAGS_x86_64_pc_windows_msvc
+CFLAGS_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_CFLAGS
+HOST_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=CC_x86_64-pc-windows-msvc
+CC_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=CC_x86_64_pc_windows_msvc
+CC_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_CC
+HOST_CC = None
+cargo:rerun-if-env-changed=CC
+CC = None
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+CARGO_CFG_TARGET_FEATURE = Some("fxsr,sse,sse2")
+cargo:rerun-if-env-changed=CFLAGS_x86_64-pc-windows-msvc
+CFLAGS_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=CFLAGS_x86_64_pc_windows_msvc
+CFLAGS_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_CFLAGS
+HOST_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jcapimin.o" "-c" "vendor/jcapimin.c"
+jcapimin.c
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jcapistd.o" "-c" "vendor/jcapistd.c"
+jcapistd.c
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jccoefct.o" "-c" "vendor/jccoefct.c"
+jccoefct.c
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jccolor.o" "-c" "vendor/jccolor.c"
+jccolor.c
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jcdctmgr.o" "-c" "vendor/jcdctmgr.c"
+jcdctmgr.c
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jcext.o" "-c" "vendor/jcext.c"
+jcext.c
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jchuff.o" "-c" "vendor/jchuff.c"
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jcinit.o" "-c" "vendor/jcinit.c"
+jchuff.c
+jcinit.c
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jcmainct.o" "-c" "vendor/jcmainct.c"
+jcmainct.c
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jcmarker.o" "-c" "vendor/jcmarker.c"
+jcmarker.c
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jcmaster.o" "-c" "vendor/jcmaster.c"
+jcmaster.c
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jcomapi.o" "-c" "vendor/jcomapi.c"
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jcparam.o" "-c" "vendor/jcparam.c"
+jcomapi.c
+jcparam.c
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jcphuff.o" "-c" "vendor/jcphuff.c"
+jcphuff.c
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jcprepct.o" "-c" "vendor/jcprepct.c"
+jcprepct.c
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jcsample.o" "-c" "vendor/jcsample.c"
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jctrans.o" "-c" "vendor/jctrans.c"
+jcsample.c
+jctrans.c
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdapimin.o" "-c" "vendor/jdapimin.c"
+jdapimin.c
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdapistd.o" "-c" "vendor/jdapistd.c"
+jdapistd.c
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdatadst.o" "-c" "vendor/jdatadst.c"
+jdatadst.c
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdatasrc.o" "-c" "vendor/jdatasrc.c"
+0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdcoefct.o" "-c" "vendor/jdcoefct.c"
+jdatasrc.c
+jdcoefct.c
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdcolor.o" "-c" "vendor/jdcolor.c"
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jddctmgr.o" "-c" "vendor/jddctmgr.c"
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdhuff.o" "-c" "vendor/jdhuff.c"
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdinput.o" "-c" "vendor/jdinput.c"
+jdcolor.c
+jddctmgr.c
+jdhuff.c
+jdinput.c
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdmainct.o" "-c" "vendor/jdmainct.c"
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdmarker.o" "-c" "vendor/jdmarker.c"
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdmaster.o" "-c" "vendor/jdmaster.c"
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdmerge.o" "-c" "vendor/jdmerge.c"
+jdmainct.c
+jdmarker.c
+jdmaster.c
+jdmerge.c
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdphuff.o" "-c" "vendor/jdphuff.c"
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdpostct.o" "-c" "vendor/jdpostct.c"
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdsample.o" "-c" "vendor/jdsample.c"
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdtrans.o" "-c" "vendor/jdtrans.c"
+jdphuff.c
+jdpostct.c
+jdsample.c
+jdtrans.c
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jerror.o" "-c" "vendor/jerror.c"
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jfdctflt.o" "-c" "vendor/jfdctflt.c"
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jfdctfst.o" "-c" "vendor/jfdctfst.c"
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jfdctint.o" "-c" "vendor/jfdctint.c"
+jerror.c
+jfdctflt.c
+jfdctfst.c
+jfdctint.c
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jidctflt.o" "-c" "vendor/jidctflt.c"
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jidctfst.o" "-c" "vendor/jidctfst.c"
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jidctint.o" "-c" "vendor/jidctint.c"
+jidctfst.c
+jidctflt.c
+jidctint.c
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jidctred.o" "-c" "vendor/jidctred.c"
+jidctred.c
+0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jmemmgr.o" "-c" "vendor/jmemmgr.c"
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jmemnobs.o" "-c" "vendor/jmemnobs.c"
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jquant1.o" "-c" "vendor/jquant1.c"
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jquant2.o" "-c" "vendor/jquant2.c"
+jmemmgr.c
+jquant1.c
+jmemnobs.c
+jquant2.c
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jutils.o" "-c" "vendor/jutils.c"
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\include" "-I" "C:\\Users\\mgros\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\mozjpeg-sys-1.1.1\\vendor" "-FoC:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jsimd_none.o" "-c" "vendor/jsimd_none.c"
+jutils.c
+jsimd_none.c
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+cargo:rerun-if-env-changed=AR_x86_64-pc-windows-msvc
+AR_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=AR_x86_64_pc_windows_msvc
+AR_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_AR
+HOST_AR = None
+cargo:rerun-if-env-changed=AR
+AR = None
+cargo:rerun-if-env-changed=ARFLAGS_x86_64-pc-windows-msvc
+ARFLAGS_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=ARFLAGS_x86_64_pc_windows_msvc
+ARFLAGS_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_ARFLAGS
+HOST_ARFLAGS = None
+cargo:rerun-if-env-changed=ARFLAGS
+ARFLAGS = None
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\lib.exe" "-out:C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\libmozjpeg62.a" "-nologo" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jcapimin.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jcapistd.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jccoefct.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jccolor.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jcdctmgr.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jcext.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jchuff.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jcinit.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jcmainct.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jcmarker.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jcmaster.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jcomapi.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jcparam.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jcphuff.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jcprepct.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jcsample.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jctrans.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdapimin.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdapistd.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdatadst.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdatasrc.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdcoefct.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdcolor.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jddctmgr.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdhuff.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdinput.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdmainct.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdmarker.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdmaster.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdmerge.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdphuff.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdpostct.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdsample.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jdtrans.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jerror.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jfdctflt.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jfdctfst.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jfdctint.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jidctflt.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jidctfst.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jidctint.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jidctred.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jmemmgr.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jmemnobs.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jquant1.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jquant2.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jutils.o" "C:\\Users\\mgros\\kittenhiss\\kittenhiRS\\khrs\\target\\debug\\build\\mozjpeg-sys-97684a73bdc6b6d7\\out\\4fcc16d6b2dfc41d-jsimd_none.o"
+exit code: 0
+cargo:rustc-link-search=native=C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.35.32215\atlmfc\lib\x64
+cargo:rustc-link-lib=static=mozjpeg62
+cargo:rustc-link-search=native=C:\Users\mgros\kittenhiss\kittenhiRS\khrs\target\debug\build\mozjpeg-sys-97684a73bdc6b6d7\out

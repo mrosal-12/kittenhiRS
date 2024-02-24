@@ -1,0 +1,10 @@
+C:\Users\mgros\kittenhiss\kittenhiRS\khrs\target\debug\deps\libnokhwa_core-c728af68edf22683.rmeta: C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-core-0.1.2\src\lib.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-core-0.1.2\src\buffer.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-core-0.1.2\src\error.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-core-0.1.2\src\pixel_format.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-core-0.1.2\src\traits.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-core-0.1.2\src\types.rs
+
+C:\Users\mgros\kittenhiss\kittenhiRS\khrs\target\debug\deps\nokhwa_core-c728af68edf22683.d: C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-core-0.1.2\src\lib.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-core-0.1.2\src\buffer.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-core-0.1.2\src\error.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-core-0.1.2\src\pixel_format.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-core-0.1.2\src\traits.rs C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-core-0.1.2\src\types.rs
+
+C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-core-0.1.2\src\lib.rs:
+C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-core-0.1.2\src\buffer.rs:
+C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-core-0.1.2\src\error.rs:
+C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-core-0.1.2\src\pixel_format.rs:
+C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-core-0.1.2\src\traits.rs:
+C:\Users\mgros\.cargo\registry\src\index.crates.io-6f17d22bba15001f\nokhwa-core-0.1.2\src\types.rs:
