@@ -1,5 +1,5 @@
 
-        #define BUILD "1708737746-mozjpeg-sys"
+        #define BUILD "1709356896-mozjpeg-sys"
         #ifndef INLINE
             #if defined(__GNUC__)
                 #define INLINE inline __attribute__((always_inline))
